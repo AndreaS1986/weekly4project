@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700|Raleway:500,400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="fancybox/jquery.fancybox-buttons.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen"/>
+</head>
+<body>
+
+
+<div class="wrapper">
+<h1>Welcome Home</h1>
+
+<div class="wall clearfix">
+	<div class="col-60 clearfix">
+		<div class="box box1"><a class="fancybox" title="London, England - The UK's most iconic symbols: Big Ben and the red telephone booth. Each telephone booth is emblazoned with a crown." rel="gallery" href="images/london_telephone.jpg"><h3>London,<br>England</h3><img src="images/london_telephone_sm.jpg"alt=""></a></div>
+		<div class="box box2"><a class="fancybox" title="NYC, USA - Central Park is an urban park in the central New York City borough of Manhattan. It first opened in 1857 and is now 843 acres in size." rel="gallery" href="images/nyc_central_park.jpg"><h3>Central Park, New York City</h3><img src="images/nyc_central_park_sm.jpg" alt=""></a></div>
+		<div class="box box3"><a class="fancybox" title="Paris, France - Constructed in 1889, the Eiffel Tower is the most visited paid monument in the world. The structure stands over 1,000 feet tall." rel="gallery" href="images/eiffel_tower.jpg"><h3>Paris, France</h3><img src="images/eiffel_tower_sm.jpg" alt=""></a></div>
+		<div class="box box4"><a class="fancybox" title="Budapest, Hungary -  The notable landmark the Hungarian Parliament Building serves as one of Europe's oldest legislative buildings. It is also the largest structure in Hungary." rel="gallery" href="images/budapest_par.jpg"><h3>Budapest, Hungary</h3><img src="images/budapest_par_sm.jpg" alt=""></a></div>
+		<div class="box box5"><a class="fancybox" title="Wiltshire, England - Stonehenge is a prehistoric monument located in the UK dating back to approximately 3000 BC." rel="gallery" href="images/stones.jpg"><h3>Stonehedge, England</h3><img src="images/stones_sm.jpg" alt=""></a></div>
+		<div class="box box6"><a class="fancybox" title="Amalfi Coast, Italy - Located in the heart of the Mediterranean, the Amalfi Coast is a stunning UNESCO World Heritage Site." rel="gallery" href="images/amalfi_coast.jpg"><h3>Amalfi Coast, Italy</h3><img src="images/amalfi_coast_sm.jpg" alt=""></a></div>
+		<div class="box box7"><a class="fancybox" title="Venice, Italy - Venice is actually comprised of 188 small islands separated by canals and linked by bridges." rel="gallery" href="images/venice_italy_1_lg.jpg"><h3>Venice, Italy</h3><img src="images/venice_italy_1_sm.jpg" alt=""></a></div>
+		<div class="box box8"><a class="fancybox" title="Santorini, Greece - A beautiful island located off the coast of Greece, Santorini is what remains after an enormous volcanic eruption." rel="gallery" href="images/greece.jpg"><h3>Santorni,<br>Greece</h3><img src="images/greece_sm.jpg" alt=""></a></div>
+	</div>  <!-- /.col-60 -->
+	
+	<div class="col-40 clearfix">
+		<div class="box box9"><a class="fancybox" title="Paris, France - The Louvre is the most visited museum in the world. If you spent 60 seconds looking at each object in the Louvre it would take 600 hours to see them all." rel="gallery" href="images/louvre.jpg"><h3>Paris, France</h3><img src="images/louvre_sm.jpg" alt=""></a></div>
+		<div class="box box10"><a class="fancybox" title="Miami, USA - South Beach also nicknamed SoBe is a neighbourhood in the city of Miami." rel="gallery" href="images/miami.jpg"><h3>Miami, Florida</h3><img src="images/miami_sm.jpg" alt=""></a></div>
+		<div class="box box11"><a class="fancybox" title="Venice, Italy - Murano is a small section of Venice (measuring 1.5km across) famous for its glass making." rel="gallery" href="images/venice_italy_lg.jpg"><h3>Venice, Italy</h3><img src="images/venice_italy_sm.jpg" alt=""></a></div>
+	</div>  <!-- /.col-40 -->
+</div>	<!-- Wall -->
+
+<footer class="wrapper">
+	<p>&copy;  A & B Productions Ltd. 2014</p>
+</footer>
+
+
+
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="fancybox/jquery.fancybox-buttons.js"></script>
+<script type="text/javascript" src="fancybox/jquery.fancybox-media.js"></script>
+<script type="text/javascript" src="fancybox/jquery.fancybox-thumbs.js"></script>
+
+<script>
+$(document).ready(function() {
+	$('.fancybox').fancybox({
+		helpers : {
+			overlay : {
+				css : {
+					'background' : 'RGBA(69, 69, 69, 0.5)'
+				}
+			},
+			title: {
+				type: 'over'
+			}
+		},
+		afterShow: function() {
+			$(".fancybox-title").wrapInner('<div />').show();
+
+			$(".fancybox-wrap").hover(function() {
+				$(".fancybox-title").show();
+			}, function() {
+				$(".fancybox-title").hide();
+			});
+		},
+	});
+});
+</script>
+
+</body>
+</html>
